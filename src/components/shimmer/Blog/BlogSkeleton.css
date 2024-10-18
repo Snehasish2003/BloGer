@@ -1,0 +1,52 @@
+/* Skeleton.css */
+
+.shimmer-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer-line,
+  .shimmer-circle,
+  .shimmer-block {
+    background-color: #202020;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer-line {
+    height: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .shimmer-circle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .shimmer-block {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .shimmer-line::after,
+  .shimmer-circle::after,
+  .shimmer-block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
